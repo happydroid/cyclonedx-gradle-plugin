@@ -15,8 +15,9 @@
   limitations under the License.
 
   Copyright (c) OWASP Foundation. All Rights Reserved.
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+--><project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -145,7 +146,12 @@
             <artifactId>maven-core</artifactId>
             <version>3.5.0</version>
         </dependency>
-    </dependencies>
+      <dependency>
+         <groupId>com.google.guava</groupId>
+         <artifactId>guava</artifactId>
+         <version>23.6.1-jre</version>
+      </dependency>
+   </dependencies>
 
     <build>
         <plugins>
@@ -236,7 +242,8 @@
                         <phase>prepare-package</phase>
                         <configuration>
                             <tasks>
-                                <replaceregexp file="build.gradle" match="version = '(.*)" replace="version = '${project.version}'" byline="true" />
+                                <replaceregexp byline="true" file="build.gradle" match="version = '(.*)"
+                                       replace="version = '${project.version}'"/>
                             </tasks>
                         </configuration>
                         <goals>
