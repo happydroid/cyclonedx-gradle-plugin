@@ -26,7 +26,7 @@ dependencies {
     compile group: 'org.asciidoctor', name: 'asciidoctorj', version:'1.5.4'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'1.5.18.RELEASE'
     compile group: 'org.apache.commons', name: 'commons-lang3', version:'3.4'
-    compile group: 'com.google.guava', name: 'guava', version:'18.0'
+    compile group: 'com.google.guava', name: 'guava', version:'29.0-jre'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version:'1.5.18.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version:'1.5.18.RELEASE'
     compile group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity4', version:'2.1.2.RELEASE'
